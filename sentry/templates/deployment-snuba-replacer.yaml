@@ -78,8 +78,6 @@ spec:
           - "errors"
           - "--auto-offset-reset"
           - "{{ .Values.snuba.replacer.autoOffsetReset }}"
-          - "--max-batch-size"
-          - "{{ default "3" .Values.snuba.replacer.maxBatchSize }}"
           {{- if .Values.snuba.replacer.maxBatchTimeMs }}
           - "--max-batch-time-ms"
           - "{{ .Values.snuba.replacer.maxBatchTimeMs }}"
